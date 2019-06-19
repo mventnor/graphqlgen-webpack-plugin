@@ -1,0 +1,40 @@
+{
+  "name": "graphqlgen-webpack-plugin",
+  "version": "0.1.0",
+  "description": "Runs graphqlgen as part of the Webpack compilation process",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "prepublishOnly": "rm -rf example/node_modules && yarn checks && yarn test && yarn build",
+    "postpublish": "yarn clean",
+    "build": "yarn clean && tsc --declaration",
+    "watch": "tsc --watch",
+    "check": "yarn tsc --noEmit"
+  },
+  "author": "Michael Ventnor",
+  "license": "MIT",
+  "dependencies": {
+    "ajv": "6.9.1",
+    "graphqlgen-json-schema": "0.6.0-rc8",
+    "graphqlgen": "0.6.0-rc9",
+    "prettier": "1.16.4"
+  },
+  "devDependencies": {
+    "@types/graphql": "14.2.0",
+    "@types/prettier": "1.15.2",
+    "@types/webpack": "4.4.32",
+    "graphql": "14.3.1",
+    "graphql-tag": "2.10.1",
+    "graphqlgen": "0.6.0-rc9",
+    "typescript": "3.5.1",
+    "yarn": "1.16.0"
+  },
+  "peerDependencies": {
+    "graphql": "^0.13.0 || ^14.0.0",
+    "webpack": "~4.0.0"
+  }
+}

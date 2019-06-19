@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es5",
+    "rootDir": "./src",
+    "outDir": "dist",
+    "sourceMap": true,
+    "lib": ["es5",
+      "es2015",
+      "es2015.promise",
+      "es2016",
+      "esnext.asynciterable",
+      "es2017"],
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  },
+  "include": ["./src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
