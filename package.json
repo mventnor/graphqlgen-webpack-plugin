@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "clean": "rm -rf dist",
-    "prepublishOnly": "rm -rf example/node_modules && yarn checks && yarn test && yarn build",
+    "prepublishOnly": "yarn check && yarn build",
     "postpublish": "yarn clean",
     "build": "yarn clean && tsc --declaration",
     "watch": "tsc --watch",
@@ -17,6 +17,10 @@
   },
   "author": "Michael Ventnor",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mventnor/graphqlgen-webpack-plugin"
+  },
   "dependencies": {
     "ajv": "6.9.1",
     "graphqlgen-json-schema": "0.6.0-rc8",
