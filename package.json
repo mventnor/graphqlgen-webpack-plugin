@@ -1,6 +1,6 @@
 {
   "name": "graphqlgen-webpack-plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Runs graphqlgen as part of the Webpack compilation process",
   "main": "dist/index.js",
   "files": [
@@ -17,7 +17,14 @@
   },
   "author": "Michael Ventnor",
   "license": "MIT",
-  "keywords": ["graphql", "webpack", "typescript", "flow", "types", "graphqlgen"],
+  "keywords": [
+    "graphql",
+    "webpack",
+    "typescript",
+    "flow",
+    "types",
+    "graphqlgen"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/mventnor/graphqlgen-webpack-plugin.git"
