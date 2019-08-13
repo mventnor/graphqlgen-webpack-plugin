@@ -31,7 +31,7 @@ function printErrors(errors: any[]): string {
 
 const validateFn = new Ajv().addMetaSchema(AjvMetaSchema).compile(ValidationSchema);
 
-function validateOptions(options: unknown): GraphQLGenDefinition {
+function validateOptions(options: unknown): options is GraphQLGenDefinition {
     if (!isObject(options)) {
         throw makeError("Please provide valid graphqlgen options directly to the plugin, as an object");
     }
@@ -40,14 +40,15 @@ function validateOptions(options: unknown): GraphQLGenDefinition {
         throw makeError(`Invalid options:\n${printErrors(validateFn.errors!)}`);
     }
 
-    return options as GraphQLGenDefinition;
+    return true;
 }
 
 class GraphqlgenWebpackPlugin implements Plugin {
     private options: GraphQLGenDefinition;
 
-    constructor(options: unknown) {
-        this.options = validateOptions(options);
+    constructor(options: GraphQLGenDefinition) {
+        validateOptions(options);
+        this.options = options;
     }
 
     apply(compiler: Compiler) {
