@@ -1,6 +1,6 @@
 {
   "name": "graphqlgen-webpack-plugin",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Runs graphqlgen as part of the Webpack compilation process",
   "main": "dist/index.js",
   "files": [
