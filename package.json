@@ -42,7 +42,7 @@
     "graphql-tag": "2.10.1",
     "graphqlgen": "0.6.0-rc9",
     "typescript": "3.5.1",
-    "yarn": "1.16.0"
+    "yarn": "1.22.0"
   },
   "peerDependencies": {
     "graphql": "^0.13.0 || ^14.0.0",
