@@ -29,7 +29,7 @@
     "url": "https://github.com/mventnor/graphqlgen-webpack-plugin.git"
   },
   "dependencies": {
-    "ajv": "6.9.1",
+    "ajv": "6.12.3",
     "graphqlgen": "0.6.0-rc9",
     "graphqlgen-json-schema": "0.6.0-rc8",
     "prettier": "1.16.4"
